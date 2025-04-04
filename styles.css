@@ -1,0 +1,33 @@
+/* Cambiar el color de fondo */
+body {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    font-family: Arial, sans-serif; /* Cambia la fuente */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Cambiar el color del título */
+h1 {
+    color: #333; /* Texto oscuro */
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cambiar color del botón al pasar el mouse */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Agregar imagen */
+img {
+    width: 200px; /* Ajusta el tamaño */
+    display: block;
+    margin: 20px auto; /* Centra la imagen */
+}
