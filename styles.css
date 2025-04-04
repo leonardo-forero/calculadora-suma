@@ -1,8 +1,21 @@
-/* Cambiar el color de fondo */
+/* Cambiar el color de fondo con animación */
 body {
-    background-color: #f4f4f4; /* Fondo gris claro */
     font-family: Arial, sans-serif; /* Cambia la fuente */
     text-align: center; /* Centra el contenido */
+    margin: 0;
+    padding: 0;
+    
+    /* 🎨 Animación de fondo */
+    animation: cambiarFondo 10s infinite;
+}
+
+/* Definición de los colores que irá tomando el fondo */
+@keyframes cambiarFondo {
+    0%   { background-color: #ffadad; }   /* Rojo claro */
+    25%  { background-color: #ffd6a5; }   /* Naranja claro */
+    50%  { background-color: #fdffb6; }   /* Amarillo claro */
+    75%  { background-color: #caffbf; }   /* Verde claro */
+    100% { background-color: #9bf6ff; }   /* Azul claro */
 }
 
 /* Cambiar el color del título */
