@@ -1,46 +1,72 @@
-/* Cambiar el color de fondo con animación */
+/* ANIMACIÓN DE FONDO CON COLORES */
 body {
-    font-family: Arial, sans-serif; /* Cambia la fuente */
-    text-align: center; /* Centra el contenido */
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    
-    /* 🎨 Animación de fondo */
     animation: cambiarFondo 10s infinite;
 }
 
-/* Definición de los colores que irá tomando el fondo */
+/* Fondo animado */
 @keyframes cambiarFondo {
-    0%   { background-color: #ffadad; }   /* Rojo claro */
-    25%  { background-color: #ffd6a5; }   /* Naranja claro */
-    50%  { background-color: #fdffb6; }   /* Amarillo claro */
-    75%  { background-color: #caffbf; }   /* Verde claro */
-    100% { background-color: #9bf6ff; }   /* Azul claro */
+    0%   { background-color: #ffadad; }
+    25%  { background-color: #ffd6a5; }
+    50%  { background-color: #fdffb6; }
+    75%  { background-color: #caffbf; }
+    100% { background-color: #9bf6ff; }
 }
 
-/* Cambiar el color del título */
-h1 {
-    color: #333; /* Texto oscuro */
+/* ESTILOS CALCULADORA */
+.calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para el botón */
-button {
-    background-color: #007bff; /* Azul */
-    color: white;
-    padding: 10px 20px;
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* BOTONES */
+.buttons button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    margin: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-/* Cambiar color del botón al pasar el mouse */
-button:hover {
+.buttons button:hover {
     background-color: #0056b3;
 }
 
-/* Agregar imagen */
+/* Botón de igual (más ancho y verde) */
+button.equal {
+    width: 255px;
+    background-color: #28a745;
+}
+
+/* TÍTULO */
+h1 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* IMAGEN (si la usas) */
 img {
-    width: 200px; /* Ajusta el tamaño */
+    width: 200px;
     display: block;
-    margin: 20px auto; /* Centra la imagen */
+    margin: 20px auto;
 }

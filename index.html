@@ -1,54 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Calculadora de Suma</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #f4f4f4;
             margin-top: 50px;
         }
-        input {
-            width: 80px;
-            padding: 5px;
-            font-size: 16px;
+
+        h1 {
+            color: #333;
         }
-        button {
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .calculator {
+            display: inline-block;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
-        #resultado {
-            margin-top: 20px;
+
+        #display {
+            width: 100%;
+            height: 40px;
             font-size: 20px;
-            font-weight: bold;
+            text-align: right;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .equal {
+            grid-column: span 4;
+            background-color: #28a745;
+        }
+
+        .equal:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <img src="sistema.png" alt="Descripción de la imagen">
-    <h1>Calculadora de Suma</h1>
-    <p>Ingresa dos números y presiona el botón para sumarlos.</p>
-    
-    <input type="number" id="num1" placeholder="Número 1">
-    <input type="number" id="num2" placeholder="Número 2">
-    <button onclick="sumar()">Sumar</button>
-    
-    <p id="resultado"></p>
+    <h1>Calculadora</h1>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('/')">÷</button>
 
-    <script>
-        function sumar() {
-            let numero1 = parseFloat(document.getElementById("num1").value);
-            let numero2 = parseFloat(document.getElementById("num2").value);
-            
-            if (!isNaN(numero1) && !isNaN(numero2)) {
-                let suma = numero1 + numero2;
-                document.getElementById("resultado").innerText = "Resultado: " + suma;
-            } else {
-                document.getElementById("resultado").innerText = "Por favor, ingresa números válidos.";
-            }
-        }
-    </script>
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('*')">×</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('-')">−</button>
+
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="append('+')">+</button>
+
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
